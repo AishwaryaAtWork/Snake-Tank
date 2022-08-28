@@ -39,6 +39,11 @@ const gameEngine=()=>{
         score=0;
     }
 
+    // if you have eaten the food, increment the score and regenerate the food
+    if (snakeArr[0].y===food.y && snakeArr[0].x===food.x) {
+        snakeArr.unshift({x: snakeArr[0].x + inputDir.x, y: snakeArr[0].y + inputDir.y})
+    } 
+
     //Part 2: Display snake
     board.innerHTML="";
     snakeArr.forEach((e,index)=>{
