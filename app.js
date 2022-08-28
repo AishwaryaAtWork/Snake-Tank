@@ -1,6 +1,6 @@
 console.log('game on');
 //Game constants aand variables
-let direction={x:0, y:0};
+let inputDir={x:0, y:0};
 const eatSound=new Audio('src/eatSound.wav');
 const gameOverSound=new Audio('src/gameOver.wav');
 const changeDirSound=new Audio('src/changeDir.wav');
@@ -11,6 +11,7 @@ let snakeArr=[
     { x:13, y:15}
 ];
 let food={x:6, y:7};
+let score=0;
 
 //Game functions
 const main=(ctime)=>{
@@ -22,8 +23,22 @@ const main=(ctime)=>{
     gameEngine();
 }
 
+const isCollide=(sarr)=>{
+    return false;
+}
+
 const gameEngine=()=>{
     //Part 1: Updating snake array and food
+    if(isCollide(snakeArr)){
+        gameOverSound.play();
+        bgMusic.pause();
+        inputDir={x:0, y:0};
+        alert('Game Over! Press any key to play again.');
+        snakeArr=[{ x:13, y:15}];
+        bgMusic.play();
+        score=0;
+    }
+
     //Part 2: Display snake
     board.innerHTML="";
     snakeArr.forEach((e,index)=>{
@@ -52,4 +67,27 @@ const gameEngine=()=>{
 window.requestAnimationFrame(main);
 window.addEventListener('keydown',e=>{
     inputDir={x:0, y:1}; //Start the game
+    changeDirSound.play();
+    switch(e.key){
+        case "ArrowUp":
+            console.log('Up');
+            inputDir.x=0;
+            inputDir.y=-1;
+            break;
+        case "ArrowDown":
+            console.log('down');
+            inputDir.x=0;
+            inputDir.y=1;
+            break;
+        case "ArrowLeft":
+            console.log('left');
+            inputDir.x=-1;
+            inputDir.y=0;
+            break;
+        case "ArrowRight":
+            console.log('right');
+            inputDir.x=1;
+            inputDir.y=0;
+            break;
+    }
 });
