@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
 .body{
     background-image: url("/src/bgImage.png");
-    min-height: 100vh;
+    height: 100vh;
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
     display: flex;
@@ -16,16 +18,84 @@
     width: 90vmin;
     height: 90vmin;
     border: black solid 3px;
+    border-radius: 1%;
     display: grid;
     grid-template-rows: repeat(18,1fr);
     grid-template-columns: repeat(18,1fr);
 }
 .head{
-    background-color: red;
+    background: linear-gradient(rgb(255, 136, 0),rgb(216, 44, 1));
+    border: 2px solid black;
+    border-radius: 22%;
+    transform: scale(1.02);
 }
 .snake{
-    background-color: blue;
+    background: linear-gradient(rgb(2, 2, 114), rgb(16, 124, 239));
+    border: 2px solid black;
+    border-radius: 32%;
+
 }
 .food{
-    background-color: purple;
+    background: linear-gradient(purple, rgb(237, 153, 237));
+    border: 2px solid black;
+    border-radius: 45%;
+}
+#scoreBox{
+    position: absolute;
+    top: 608px;
+    right: 1330px;
+    font-size: 42px;
+    font-weight: bold;
+    border: 3px solid black;
+    padding: 15px;
+    border-radius: 22px;
+    background: linear-gradient(rgb(243, 147, 37),rgb(216, 44, 1));
+    font-family: 'New Tegomin', serif;
+    
+}
+#highScoreBox{
+    position: absolute;
+    top: 498px;
+    right: 1216px;
+    font-size: 42px;
+    font-weight: bold;
+    border: 3px solid black;
+    padding: 15px;
+    border-radius: 22px;
+    background: linear-gradient(rgb(243, 147, 37),rgb(216, 44, 1));
+    font-family: 'New Tegomin', serif;
+    
+}
+#confirm{
+    position: absolute;
+    text-align: center;
+    top: 198px;
+    right: 503px;
+    font-size: 51px;
+    width: 532px;
+    height: 172px;
+    font-weight: bold;
+    border: 3px solid black;
+    padding: 15px;
+    border-radius: 22px;
+    background: linear-gradient(rgb(243, 147, 37),rgb(216, 44, 1));
+    font-family: 'New Tegomin', serif;   
+    display: none;
+    
+}
+#btn{
+    font-size: 21px;
+    font-weight: bolder;
+    cursor: pointer;
+    border: 3px solid black;
+    padding: 15px;
+    border-radius: 22px;
+    background: linear-gradient(rgb(59, 249, 69),rgb(3, 101, 19));
+    font-family: 'New Tegomin', serif;   
+}
+#btn:hover{
+    color: white;
+    border: 4px solid white;
+    padding: 16px;
+    background: linear-gradient(rgb(11, 212, 22),rgb(8, 64, 17));
 }
