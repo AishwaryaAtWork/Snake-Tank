@@ -114,6 +114,7 @@ else{
 
 window.requestAnimationFrame(main);
 window.addEventListener('keydown',e=>{
+    bgMusic.play();
     changeDirSound.play();
     inputDir={x:0, y:1}; //Start the game
     switch(e.key){
