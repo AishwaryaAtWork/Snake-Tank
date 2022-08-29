@@ -1,11 +1,13 @@
 //Game constants aand variables
 let inputDir={x:0, y:0};
 let btn=document.getElementById('btn');
+let incBtn=document.getElementById('incBtn');
+let decBtn=document.getElementById('decBtn');
 const eatSound=new Audio('src/eatSound.wav');
 const gameOverSound=new Audio('src/gameOver.wav');
 const changeDirSound=new Audio('src/changeDir.wav');
 const bgMusic=new Audio('src/bgMusic.mp3');
-let speed=5;
+let speed=2;
 let lastPaintTime=0;
 let snakeArr=[
     { x:13, y:15}
@@ -134,5 +136,23 @@ window.addEventListener('keydown',e=>{
             inputDir.x=1;
             inputDir.y=0;
             break;
+    }
+});
+
+//Speed functions
+incBtn.addEventListener('click',()=>{
+    if(speed>=1 && speed<=9){
+        speed+=1; // increases the speed
+    }
+    else{
+        speed=1; // default speed
+    }
+});
+decBtn.addEventListener('click',()=>{
+    if(speed>=2 && speed<=9){
+        speed-=1; // decreases the speed
+    }
+    else{
+        speed=9; // default speed
     }
 });
