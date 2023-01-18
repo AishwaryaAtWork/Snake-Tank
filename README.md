@@ -7,9 +7,11 @@ It's a single player gaming website which you can use to reduce your boredom.
 
 ## Build with
 HTML , CSS and Vanilla Javascript.
+
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+ere)
+![Screenshot (546)](https://user-images.githubusercontent.com/109826222/213186296-c5fff342-c2d4-40ce-949a-7ba28558cb0e.png)
+
 
 
 ## Run Locally
