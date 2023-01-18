@@ -38,4 +38,4 @@ Link - https://github.com/AishwaryaAtWork/Snake-Tank
 ## Connect with me
 
  - [Github ](https://github.com/AishwaryaAtWork)
- - [LinkedIn](www.linkedin.com/in/aishwarya-pathak-573993233)
+ - [LinkedIn](www.linkedin.com/in/aishwarya-pathak)
